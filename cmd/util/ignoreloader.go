@@ -36,7 +36,7 @@ type TomlConfig struct {
 	Sequences         SequenceIgnoreConfig         `toml:"sequences,omitempty"`
 	Privileges        PrivilegeIgnoreConfig        `toml:"privileges,omitempty"`
 	DefaultPrivileges DefaultPrivilegeIgnoreConfig `toml:"default_privileges,omitempty"`
-	Constraints       ConstraintsIgnoreConfig      `toml:"constraints,omitempty"`
+	Constraints       ConstraintIgnoreConfig       `toml:"constraints,omitempty"`
 }
 
 // TableIgnoreConfig represents table-specific ignore configuration
@@ -81,9 +81,9 @@ type DefaultPrivilegeIgnoreConfig struct {
 	Patterns []string `toml:"patterns,omitempty"`
 }
 
-// ConstraintsIgnoreConfig represents constraint-specific ignore configuration
+// ConstraintIgnoreConfig represents constraint-specific ignore configuration
 // Patterns match constraint names, including optionally qualified names
-type ConstraintsIgnoreConfig struct {
+type ConstraintIgnoreConfig struct {
 	Patterns []string `toml:"patterns,omitempty"`
 }
 
